@@ -1,0 +1,22 @@
+{
+  "name": "dynapack-example-simple",
+  "version": "0.0.0",
+  "description": "Simple dynapack example.",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "dynapack"
+  ],
+  "author": "Carl A. Bauer",
+  "license": "MIT",
+  "dependencies": {
+    "dynafetch": "0.0.2",
+    "dynapack": "0.0.2",
+    "connect": "^2.18.0",
+    "serve-static": "^1.2.0",
+    "parseurl": "^1.0.1"
+  }
+}
