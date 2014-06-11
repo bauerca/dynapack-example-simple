@@ -4,6 +4,7 @@ To run the example, issue the following commands
 
 ```
 > git clone https://github.com/bauerca/dynapack-example-simple.git
+> cd dynapack-example-simple
 > npm install
 > ./node_modules/.bin/dynapack client.js
 > node server.js

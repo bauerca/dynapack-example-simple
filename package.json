@@ -13,10 +13,10 @@
   "author": "Carl A. Bauer",
   "license": "MIT",
   "dependencies": {
-    "dynafetch": "0.0.2",
-    "dynapack": "0.0.2",
     "connect": "^2.18.0",
-    "serve-static": "^1.2.0",
-    "parseurl": "^1.0.1"
+    "dynafetch": "0.0.2",
+    "dynapack": "0.0.7",
+    "parseurl": "^1.0.1",
+    "serve-static": "^1.2.0"
   }
 }
