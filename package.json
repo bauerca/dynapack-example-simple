@@ -14,8 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "connect": "^2.18.0",
-    "dynafetch": "0.0.2",
-    "dynapack": "0.0.7",
+    "dynafetch": "0.0.3",
+    "dynapack": "0.0.8",
     "parseurl": "^1.0.1",
     "serve-static": "^1.2.0"
   }
