@@ -16,14 +16,15 @@ var index = function(msg) {
         return '<li onclick="go(\'/' + word + '\')">secret</li>';
       }).join('') +
       '</ul>' +
-      '<script src="/main.js"></script>' +
+      '<script src="/entry.0.js"></script>' +
+      '<script src="/1.js"></script>' +
     '</body>' +
     '</html>'
   );
 };
 
 var app = connect();
-app.use(serveStatic(__dirname + '/chunks'));
+app.use(serveStatic(__dirname + '/dynapack-chunks'));
 app.use(function(req, res) {
   router(parseurl(req).path, function(msg) {
     var html = index(msg);

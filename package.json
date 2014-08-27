@@ -15,8 +15,17 @@
   "dependencies": {
     "connect": "^2.18.0",
     "dynafetch": "0.0.3",
-    "dynapack": "0.0.9",
+    "dynapack": "^0.2.2",
     "parseurl": "^1.0.1",
     "serve-static": "^1.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bauerca/dynapack-example-simple.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bauerca/dynapack-example-simple/issues"
+  },
+  "homepage": "https://github.com/bauerca/dynapack-example-simple"
 }
