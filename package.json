@@ -5,7 +5,7 @@
   "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node_modules/.bin/dynapack app.js && node server.js"
   },
   "keywords": [
     "dynapack"
@@ -14,8 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "connect": "^2.18.0",
-    "dynafetch": "0.0.3",
-    "dynapack": "^0.2.2",
+    "dynapack": "^0.3.x",
+    "node-ensure": "0.0.0",
     "parseurl": "^1.0.1",
     "serve-static": "^1.2.0"
   },

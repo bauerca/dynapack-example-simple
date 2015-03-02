@@ -1,8 +1,8 @@
-var router = require('./router');
+var route = require('./route');
 
 function onChange(path) {
-  router(path, function(msg) {
-    document.getElementById('msg').innerHTML = msg;
+  route(path, function(err, content) {
+    document.getElementById('content').innerHTML = err ? err.message : content;
   });
 }
 

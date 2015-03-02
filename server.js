@@ -1,34 +1,41 @@
 var connect = require('connect');
 var serveStatic = require('serve-static');
-var fs = require('fs');
-var router = require('./router');
+var route = require('./route');
 var parseurl = require('parseurl');
 
 var words = 'hey do you want to know a secret';
-var index = function(msg) {
+
+function renderString(content) {
   return (
     '<html>' +
-    '<head></head>' +
+    '<head>' +
+      '<style>li {cursor: pointer;} li:hover {color: #3366bb;}</style>' +
+    '</head>' +
     '<body>' +
-      '<h1 id="msg">' + msg + '</h1>' +
+      '<h1>Find the secret</h1>' +
       '<ul>' +
       words.split(' ').map(function(word) {
         return '<li onclick="go(\'/' + word + '\')">secret</li>';
       }).join('') +
       '</ul>' +
+      '<div id="content">' + content + '</h1>' +
       '<script src="/entry.0.js"></script>' +
       '<script src="/1.js"></script>' +
     '</body>' +
     '</html>'
   );
-};
+}
 
 var app = connect();
-app.use(serveStatic(__dirname + '/dynapack-chunks'));
+app.use(serveStatic(__dirname + '/bundles'));
+app.use('/images', serveStatic(__dirname + '/images'));
 app.use(function(req, res) {
-  router(parseurl(req).path, function(msg) {
-    var html = index(msg);
+  route(parseurl(req).path, function(err, content) {
+    var html = renderString(err ? err.message : content);
     res.end(html);
   });
 });
-app.listen(3333);
+app.listen(3333, function(err) {
+  if (err) throw err;
+  console.log('Go to http://localhost:3333');
+});
