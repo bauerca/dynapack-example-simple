@@ -6,7 +6,7 @@ To run the example, issue the following commands
 > git clone https://github.com/bauerca/dynapack-example-simple.git
 > cd dynapack-example-simple
 > npm install
-> ./node_modules/.bin/dynapack app.js
+> ./node_modules/.bin/dynapack browser.js
 > node server.js
 ```
 
