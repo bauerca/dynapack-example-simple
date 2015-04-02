@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var scripts = fs.readFileSync('bundles/app.html', {encoding: 'utf8'});
+var scripts = fs.readFileSync('bundles/browser.html', {encoding: 'utf8'});
 var words = 'hey do you want to know a secret';
 
 function layout(content) {
